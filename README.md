@@ -1,2 +1,3 @@
-# unbound-root-resolver
-Unbound Standalone DNS Server
+# Unbound DNS Server
+
+Unbound Standalone DNS Server as Docker Image
