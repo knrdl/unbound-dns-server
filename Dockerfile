@@ -4,11 +4,9 @@ RUN apk add --no-cache unbound
 
 COPY server.conf /etc/unbound/unbound.conf.d/server.conf
 
-ADD --chmod=444 https://www.internic.net/domain/named.root /var/lib/unbound/root.hints
+ADD --chmod=666 https://www.internic.net/domain/named.root /var/lib/unbound/root.hints
 
 RUN chown -R unbound:unbound /var/lib/unbound
-
-USER unbound
 
 EXPOSE 53/tcp 53/udp
 
